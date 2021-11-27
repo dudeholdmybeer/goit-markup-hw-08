@@ -1,0 +1,97 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  border: solid #eee;
+  border-width: 0 0 1px 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+footer {
+  background-color: var(--secondary-background-color);
+}
+
+// Базовые стили из лекции
+
+// html {
+//   box-sizing: border-box;
+//   scroll-behavior: smooth;
+// }
+
+// *,
+// *::after,
+// *::before {
+//   box-sizing: inherit;
+// }
+
+// body {
+//   font-family: var(--main-font);
+//   font-weight: 600;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
+
+// ul,
+// ol {
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-left: 0;
+// }
+
+// img {
+//   display: block;
+// }
+
+// .list {
+//   list-style: none;
+// }
+
+// .link {
+//   text-decoration: none;
+// }

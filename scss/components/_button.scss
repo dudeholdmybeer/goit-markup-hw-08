@@ -1,0 +1,37 @@
+.button {
+  display: inline-flex;
+  min-width: 200px;
+  min-height: 50px;
+  border: 0px;
+  text-align: center;
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &:active {
+    background-color: #188ce8;
+  }
+}
+
+// Миксы для кнопок
+
+.hero__button {
+  padding: 10px 32px;
+}
+
+.footer-form__button {
+  align-items: center;
+  text-align: left;
+  padding: 10px 29px;
+}
+
+.modal-form__button {
+  align-self: center;
+  padding: 10px 55px;
+}

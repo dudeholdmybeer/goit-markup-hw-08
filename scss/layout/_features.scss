@@ -1,0 +1,39 @@
+.features {
+  display: flex;
+}
+
+.features__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-background-color);
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+.features-card__icon {
+  height: 70px;
+  width: 70px;
+}
+
+.features-card__title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features-card__text {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}

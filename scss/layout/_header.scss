@@ -1,0 +1,124 @@
+// Header
+
+.container__header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    width: 100%;
+  }
+}
+
+/* site-nav */
+
+.site-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+}
+
+.site-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+/* auth-nav */
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.auth-nav__item {
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  // &:not(:last-child) {
+  //   margin-right: 50px;
+  // }
+}
+
+.auth-nav__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+.auth-nav__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/* Current page */
+
+.site-nav__link--current {
+  color: var(--accent-color);
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    bottom: -32px;
+    display: block;
+  }
+}

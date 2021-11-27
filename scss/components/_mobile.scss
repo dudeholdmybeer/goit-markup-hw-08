@@ -1,0 +1,173 @@
+// Mobile menu
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 48px 40px;
+  font-weight: 500;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #ffffff;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+// Mobile menu buttons
+
+.burger-button {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  line-height: 0;
+  margin-left: auto;
+
+  &:active {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger-button__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  line-height: 0;
+
+  &:active {
+    fill: var(--accent-color);
+  }
+}
+
+.close-button__icon {
+  width: 40px;
+  height: 40px;
+}
+
+// Mobile-site-nav
+
+.mobile-site-nav {
+}
+.mobile-site-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mobile-site-nav__link {
+  font-size: 40px;
+  line-height: 1.17;
+  color: var(--title-text-color);
+}
+.mobile-site-nav__link--current {
+  color: var(--accent-color);
+}
+
+// Mobile-auth-nav
+
+.mobile-auth-nav {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+.mobile-auth-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mobile-auth-nav__link {
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--primary-text-color);
+}
+
+.mobile-auth-nav__link--blue {
+  font-size: 34px;
+  color: var(--accent-color);
+}
+
+.mobile-auth-nav__text-tel {
+  @media screen and (max-width: 479px) {
+    font-size: 7vw;
+  }
+}
+
+.mobile-auth-nav__text-mail {
+  @media screen and (max-width: 479px) {
+    font-size: 5vw;
+  }
+}
+// Mobile social links
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-social__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.mobile-social__link {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--accent-color);
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 22px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    left: -10px;
+    top: 0;
+    display: block;
+
+    // Может как-то так можно убрать?
+    // &:not(:first-child)::after {
+    //     content: '';
+    //     width: 100%;
+    //     position: absolute;
+    //     height: 4px;
+    //     border-radius: 2px;
+    //     background-color: var(--accent-color);
+    //     bottom: -32px;
+    //     display: block;
+    //   }
+  }
+}
