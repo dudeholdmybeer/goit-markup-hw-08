@@ -1,29 +1,92 @@
 .hero {
-  background-color: var(--secondary-background-color);
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 480px;
+  height: 400px;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/hero-bg.jpg);
+    url(/img/hero/m-hero.jpeg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  max-width: 1600px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/img/hero/m-hero@2x.jpeg);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/img/hero/t-hero.jpeg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(/img/hero/t-hero@2x.jpeg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/img/hero/d-hero.jpeg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(/img/hero/d-hero@2x.jpeg);
+    }
+  }
 }
 
 .hero__title {
   color: var(--secondary-text-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 695px;
+  max-width: 360px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }

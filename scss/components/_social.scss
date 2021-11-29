@@ -42,7 +42,9 @@
 // Footer social links
 
 .footer-social-wrapp {
-  margin-right: 93px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .social__link--dark {

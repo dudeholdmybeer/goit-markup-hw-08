@@ -20,7 +20,7 @@
   }
 }
 
-/* site-nav */
+// Site-nav
 
 .site-nav {
   @media screen and (max-width: 767px) {
@@ -51,7 +51,7 @@
   }
 }
 
-/* auth-nav */
+// Auth-nav
 
 .auth-nav {
   display: flex;
@@ -61,7 +61,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
   }
 }
@@ -78,10 +78,6 @@
       margin-right: 50px;
     }
   }
-
-  // &:not(:last-child) {
-  //   margin-right: 50px;
-  // }
 }
 
 .auth-nav__link {
@@ -106,7 +102,7 @@
   margin-right: 10px;
 }
 
-/* Current page */
+// Current page
 
 .site-nav__link--current {
   color: var(--accent-color);

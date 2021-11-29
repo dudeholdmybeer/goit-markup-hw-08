@@ -1,5 +1,5 @@
 .button {
-  display: inline-flex;
+  display: block;
   min-width: 200px;
   min-height: 50px;
   border: 0px;
@@ -23,12 +23,21 @@
 
 .hero__button {
   padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-form__button {
+  display: flex;
   align-items: center;
   text-align: left;
   padding: 10px 29px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+  }
 }
 
 .modal-form__button {
